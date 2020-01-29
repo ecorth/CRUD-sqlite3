@@ -83,7 +83,9 @@ class Product:
         self.message['text'] = 'Registro: {}, borrado exitosamente.'.format(product)
         self.get_product()
     # db Update product
-    def update_product(self):
+    def update_product(self
+                      
+                      ):
         self.message['text'] = ''
         try:
             self.tree.item(self.tree.selection())['values'][0]
@@ -111,7 +113,7 @@ class Product:
     # Button edit produtc
         Button(self.edit_wind, text='Actualizar', command = lambda: self.edit_records(new_product.get(), product, new_price.get(), price)).grid(row = 4, column = 2, sticky = W + E)
     # Edti produtcs
-    def edit_records(self, product, price, new_product, new_price):
+    def edit_records(self, new_product, product,  new_price, price):
         query = 'UPDATE products SET product = ?, price = ? WHERE product = ? AND price = ?'
         parameters = (new_product, new_price, product, price)
         self.run_query(query, parameters)
